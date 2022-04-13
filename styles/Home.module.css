@@ -11,6 +11,13 @@
   width: 40%;
   margin: auto;
   color: white;
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home .textContainer img {
+  margin: auto;
 }
 .home .textContainer h2 {
   font-size: 40px;
@@ -24,6 +31,8 @@
 }
 
 .home .footer {
+  padding: 0 5%;
+  display: flex;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -38,6 +47,7 @@
 @media all and (max-width: 768px) {
   .home .container {
     flex-direction: column;
+    padding: 0 10% 120px 10%;
   }
   .home .textContainer {
     width: 100%;

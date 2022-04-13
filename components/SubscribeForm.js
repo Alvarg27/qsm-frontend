@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/SubscribeForm.module.css";
 import BeatLoader from "./BeatLoader";
+import { FaCheckCircle } from "react-icons/fa";
 
 export default function SubscribeForm() {
   const [loading, setLoading] = useState(false);
@@ -9,6 +10,7 @@ export default function SubscribeForm() {
   const [lastName, setLastName] = useState();
   const [email, setEmail] = useState();
   const [success, setSuccess] = useState(false);
+  const [message, setMessage] = useState();
 
   const handleSubscribe = async () => {
     setError(undefined);
@@ -35,9 +37,8 @@ export default function SubscribeForm() {
         console.error(result.message);
         setError(result.message);
       } else {
-        console.log(result);
-        alert(result.message);
-        setError(error.message);
+        setSuccess(true);
+        setMessage(result.message);
       }
     } catch (error) {
       console.error(error);
@@ -48,7 +49,11 @@ export default function SubscribeForm() {
   return (
     <div className={styles.subscribeForm}>
       {success ? (
-        ""
+        <div className={styles.container}>
+          <FaCheckCircle className={styles.checkIcon} />
+          <h2 style={{ textAlign: "center", color: "white" }}>¡Listo!</h2>
+          <p style={{ textAlign: "center", margin: "0" }}>{message}</p>
+        </div>
       ) : (
         <div className={styles.container}>
           <p style={{ textAlign: "center" }}>

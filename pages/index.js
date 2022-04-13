@@ -4,6 +4,8 @@ import SubscribeForm from "../components/SubscribeForm";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
+  const date = new Date();
+  const year = date.getFullYear();
   return (
     <div className={styles.home}>
       <Head>
@@ -16,18 +18,23 @@ export default function Home() {
       </Head>
       <div className={styles.container}>
         <div className={styles.textContainer}>
-          <img src="/qsm-logo.webp" width="100px" heigth="100%" alt="qsm" />
-          <h3>QSM semiconductores</h3>
-          <p>
-            Empresa queretana dedicada al diseño y desarollo de semiconductores
-            para sensores y circuitos integrados
-          </p>
-          <h2>PRÓXIMAMENTE</h2>
+          <div>
+            <img src="/qsm-logo.webp" width="100px" heigth="100%" alt="qsm" />
+            <h3>QSM semiconductores</h3>
+            <p>
+              Empresa queretana dedicada al diseño y desarollo de
+              semiconductores para sensores y circuitos integrados
+            </p>
+            <h2>PRÓXIMAMENTE</h2>
+          </div>
         </div>
         <SubscribeForm />
       </div>
       <div className={styles.footer}>
-        <p></p>
+        <p className="copyright">
+          © {year} <b>QSM</b> | powered by <b>tectify.io</b> | Todos los
+          derechos reservados
+        </p>
       </div>
     </div>
   );
