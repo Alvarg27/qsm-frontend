@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/SubscribeForm.module.css";
 import BeatLoader from "./BeatLoader";
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheck, FaPaperPlane } from "react-icons/fa";
 
 export default function SubscribeForm() {
   const [loading, setLoading] = useState(false);
@@ -50,14 +50,25 @@ export default function SubscribeForm() {
     <div className={styles.subscribeForm}>
       {success ? (
         <div className={styles.container}>
-          <FaCheckCircle className={styles.checkIcon} />
-          <h2 style={{ textAlign: "center", color: "white" }}>¡Listo!</h2>
+          <div className={styles.iconCircle}>
+            <FaCheck style={{ margin: "auto" }} />
+          </div>
+          <h2
+            className={styles.subtitle}
+            style={{ textAlign: "center", color: "white" }}
+          >
+            ¡Listo!
+          </h2>
           <p style={{ textAlign: "center", margin: "0" }}>{message}</p>
         </div>
       ) : (
         <div className={styles.container}>
+          <div className={styles.iconCircle}>
+            <FaPaperPlane style={{ margin: "auto" }} />
+          </div>
           <p style={{ textAlign: "center" }}>
-            <b>Suscríbete</b> y mantente informado del lanzamiento
+            <b className={styles.highlight}>Suscríbete</b> y mantente informado
+            del lanzamiento.
           </p>
           <input
             onChange={(e) => setFirstName(e.target.value)}

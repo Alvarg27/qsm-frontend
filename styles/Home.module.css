@@ -4,8 +4,10 @@
 .home .container {
   display: flex;
   min-height: 100vh;
-  padding-bottom: 100px;
+  padding-bottom: 60px;
   transition: 0.3s;
+  position: relative;
+  z-index: 2;
 }
 .home .textContainer {
   width: 40%;

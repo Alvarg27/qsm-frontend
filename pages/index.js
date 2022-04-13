@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Background from "../components/Background";
 import SubscribeForm from "../components/SubscribeForm";
 import styles from "../styles/Home.module.css";
 
@@ -20,14 +21,15 @@ export default function Home() {
         ></meta>
         <link rel="icon" href="/qsm-icon.webp" />
       </Head>
+      <Background />
       <div className={styles.container}>
         <div className={styles.textContainer}>
           <div>
             <img src="/qsm-logo.webp" width="100px" heigth="100%" alt="qsm" />
-            <h3>QSM semiconductores</h3>
+            <h3>QSM Semiconductores</h3>
             <p>
               Empresa queretana dedicada al diseño y desarollo de
-              semiconductores para sensores y circuitos integrados
+              semiconductores para sensores y circuitos integrados.
             </p>
             <h2>PRÓXIMAMENTE</h2>
           </div>
