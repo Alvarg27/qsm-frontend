@@ -14,6 +14,10 @@ export default function Home() {
           name="description"
           content="Empresa queretana dedicada al diseño y desarollo de semiconductores para sensores y circuitos integrados"
         />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1"
+        ></meta>
         <link rel="icon" href="/qsm-icon.webp" />
       </Head>
       <div className={styles.container}>
