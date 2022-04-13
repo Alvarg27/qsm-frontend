@@ -8,6 +8,7 @@ export default function SubscribeForm() {
   const [firstName, setFirstName] = useState();
   const [lastName, setLastName] = useState();
   const [email, setEmail] = useState();
+  const [success, setSuccess] = useState(false);
 
   const handleSubscribe = async () => {
     setError(undefined);
@@ -46,37 +47,41 @@ export default function SubscribeForm() {
 
   return (
     <div className={styles.subscribeForm}>
-      <div className={styles.container}>
-        <p style={{ textAlign: "center" }}>
-          <b>Suscríbete</b> y mantente informado del lanzamiento
-        </p>
-        <input
-          onChange={(e) => setFirstName(e.target.value)}
-          maxLength="64"
-          autoComplete="given-name"
-          placeholder="Nombre"
-        ></input>
-        <input
-          onChange={(e) => setLastName(e.target.value)}
-          maxLength="64"
-          autoComplete="family-name"
-          placeholder="Apellido"
-        ></input>
-        <input
-          onChange={(e) => setEmail(e.target.value)}
-          maxLength="254"
-          autoComplete="email"
-          placeholder="Correo elecrónico"
-        ></input>
-        <button
-          onClick={() => handleSubscribe()}
-          style={{ margin: "15px 0" }}
-          className="primaryButton"
-        >
-          {loading ? <BeatLoader /> : <p>Suscribirme</p>}
-        </button>
-        {error ? <p className={styles.errorMessage}>¡{error}!</p> : ""}
-      </div>
+      {success ? (
+        ""
+      ) : (
+        <div className={styles.container}>
+          <p style={{ textAlign: "center" }}>
+            <b>Suscríbete</b> y mantente informado del lanzamiento
+          </p>
+          <input
+            onChange={(e) => setFirstName(e.target.value)}
+            maxLength="64"
+            autoComplete="given-name"
+            placeholder="Nombre"
+          ></input>
+          <input
+            onChange={(e) => setLastName(e.target.value)}
+            maxLength="64"
+            autoComplete="family-name"
+            placeholder="Apellido"
+          ></input>
+          <input
+            onChange={(e) => setEmail(e.target.value)}
+            maxLength="254"
+            autoComplete="email"
+            placeholder="Correo elecrónico"
+          ></input>
+          <button
+            onClick={() => handleSubscribe()}
+            style={{ margin: "15px 0" }}
+            className="primaryButton"
+          >
+            {loading ? <BeatLoader /> : <p>Suscribirme</p>}
+          </button>
+          {error ? <p className={styles.errorMessage}>¡{error}!</p> : ""}
+        </div>
+      )}
     </div>
   );
 }

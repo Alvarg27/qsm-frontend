@@ -6,12 +6,21 @@
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 0 20px rgb(0, 0, 0, 0.5);
+  height: 480px;
+  display: flex;
+  flex-direction: column;
+}
+.subscribeForm .container {
+  margin: auto;
+  position: relative;
 }
 .subscribeForm .errorMessage {
+  position: absolute;
   margin: 0;
   font-size: 14px;
   color: rgb(22, 24, 41);
   text-align: center;
+  width: 100%;
 }
 
 @media all and (max-width: 768px) {
