@@ -1,0 +1,18 @@
+.home .container {
+  display: flex;
+}
+.home .textContainer {
+  width: 50%;
+  margin: auto;
+  color: white;
+}
+.home .textContainer h2 {
+  font-size: 72px;
+  background: linear-gradient(
+    90deg,
+    rgba(41, 170, 225, 1) 0%,
+    rgba(140, 198, 62, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

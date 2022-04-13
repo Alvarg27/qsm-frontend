@@ -1,0 +1,13 @@
+.subscribeForm {
+  margin: auto;
+  max-width: 300px;
+  background: #29aae1;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgb(0, 0, 0, 0.5);
+}
+.subscribeForm .errorMessage {
+  margin: 0;
+  font-size: 14px;
+  color: rgb(22, 24, 41);
+}
