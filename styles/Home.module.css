@@ -1,5 +1,10 @@
 .home {
   position: relative;
+  background: linear-gradient(
+    145deg,
+    rgba(18, 19, 29, 1) 0%,
+    rgba(16, 22, 66, 1) 100%
+  );
 }
 .home .container {
   display: flex;
