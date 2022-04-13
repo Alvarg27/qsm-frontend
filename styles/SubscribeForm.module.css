@@ -18,6 +18,7 @@
 }
 .subscribeForm .errorMessage {
   position: absolute;
+  bottom: -15px;
   margin: 0;
   font-size: 14px;
   color: rgb(22, 24, 41);
