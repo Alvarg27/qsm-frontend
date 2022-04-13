@@ -17,8 +17,7 @@
   flex-direction: column;
 }
 .subscribeForm .errorMessage {
-  position: absolute;
-  bottom: -15px;
+  bottom: -30px;
   margin: 0;
   font-size: 14px;
   color: rgb(22, 24, 41);
