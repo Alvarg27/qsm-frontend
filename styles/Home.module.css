@@ -1,13 +1,19 @@
+.home {
+  position: relative;
+}
 .home .container {
   display: flex;
+  min-height: 100vh;
+  padding-bottom: 100px;
+  transition: 0.3s;
 }
 .home .textContainer {
-  width: 50%;
+  width: 40%;
   margin: auto;
   color: white;
 }
 .home .textContainer h2 {
-  font-size: 72px;
+  font-size: 40px;
   background: linear-gradient(
     90deg,
     rgba(41, 170, 225, 1) 0%,
@@ -15,4 +21,29 @@
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.home .footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(41, 170, 225, 1) 0%,
+    rgba(140, 198, 62, 1) 100%
+  );
+  height: 60px;
+}
+
+@media all and (max-width: 768px) {
+  .home .container {
+    flex-direction: column;
+  }
+  .home .textContainer {
+    width: 100%;
+    text-align: center;
+  }
+  .home .textContainer h2 {
+    font-size: 40px;
+  }
 }

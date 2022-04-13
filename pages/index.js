@@ -16,7 +16,7 @@ export default function Home() {
       </Head>
       <div className={styles.container}>
         <div className={styles.textContainer}>
-          <img src="/qsm-logo.webp" width="200px" heigth="100%" alt="qsm" />
+          <img src="/qsm-logo.webp" width="100px" heigth="100%" alt="qsm" />
           <h3>QSM semiconductores</h3>
           <p>
             Empresa queretana dedicada al diseño y desarollo de semiconductores
@@ -25,6 +25,9 @@ export default function Home() {
           <h2>PRÓXIMAMENTE</h2>
         </div>
         <SubscribeForm />
+      </div>
+      <div className={styles.footer}>
+        <p></p>
       </div>
     </div>
   );

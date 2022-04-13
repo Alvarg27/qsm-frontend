@@ -47,7 +47,7 @@ export default function SubscribeForm() {
   return (
     <div className={styles.subscribeForm}>
       <div className={styles.container}>
-        <p>
+        <p style={{ textAlign: "center" }}>
           <b>Suscríbete</b> y mantente informado del lanzamiento
         </p>
         <input

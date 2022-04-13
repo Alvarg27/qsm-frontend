@@ -1,6 +1,7 @@
 .subscribeForm {
   margin: auto;
-  max-width: 300px;
+  width: 40%;
+  max-width: 400px;
   background: #29aae1;
   padding: 30px;
   border-radius: 15px;
@@ -10,4 +11,11 @@
   margin: 0;
   font-size: 14px;
   color: rgb(22, 24, 41);
+  text-align: center;
+}
+
+@media all and (max-width: 768px) {
+  .subscribeForm {
+    width: 100%;
+  }
 }
